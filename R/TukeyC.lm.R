@@ -136,7 +136,7 @@ TukeyC.lm <- function(x,
 
   }
 
-  # Aqui não ha interesse em interacoes!!!!
+  # Aqui nao ha interesse em interacoes!!!!
   if(is.null(fl1) & !is.null(error)){#Um erro de interesse do usuario
 
     anov <- anova(x)
@@ -167,7 +167,7 @@ TukeyC.lm <- function(x,
                                            effect = which,
                                            level = 1 - sig.level))
 
-  aux_mt1 <- aux_mt$coef[,1]
+  aux_mt1 <- with(aux_mt,estimate)
 
   aux_mt2 <- data.frame(means = aux_mt1,
                         reps = reps)
